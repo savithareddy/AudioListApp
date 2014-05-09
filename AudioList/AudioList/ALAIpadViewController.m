@@ -7,6 +7,10 @@
 //
 
 #import "ALAIpadViewController.h"
+#import "ALAListVC.h"
+#import "ALADetailVC.h" //import detailVC here after @class in .h
+#import "ALASoundCloudRequest.h"
+
 
 @interface ALAIpadViewController () <UISplitViewControllerDelegate>
 
@@ -14,18 +18,20 @@
 
 @implementation ALAIpadViewController
 {
-    UITableViewController *listVC;
-    UIViewController *detailVC;
+    ALAListVC *listVC;
+ ALADetailVC *detailVC;
     UINavigationController *nc;
+    
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        detailVC = [[UIViewController alloc] initWithNibName:nil bundle:nil];
+        detailVC = [[ALADetailVC alloc] initWithNibName:nil bundle:nil];
         nc = [[UINavigationController alloc] initWithRootViewController:detailVC];
-        listVC = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+        listVC = [[ALAListVC alloc] initWithStyle:UITableViewStylePlain];
+        listVC.detailVC = detailVC; // very important after import declare listVC property detailVC == detailvc
         self.viewControllers = @[listVC,nc];
         self.presentsWithGesture = YES; //default value is YES so popover still works if this is commented
         self.delegate = self;
@@ -35,25 +41,24 @@
 
 -(void)splitViewController:(UISplitViewController *)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)pc
 {
-//    NSLog(@"%@",nc);
-  barButtonItem.title = @"button";
-//    NSLog(@"%@",barButtonItem);
+    barButtonItem.title = @"button";
     detailVC.navigationItem.leftBarButtonItem = barButtonItem;
+     nc.navigationBarHidden = NO;
+    
 //    detailVC.navigationController.navigationBarHidden = NO; // landscape no NavBAr and only potrait we have navBar
-    nc.navigationBarHidden = NO;
-    NSLog(@" hide"); // works on rotation of the screen and not on the swipe gesture
+//    NSLog(@" hide"); // works on rotation of the screen and not on the swipe gesture
 }
 
 -(void)splitViewController:(UISplitViewController *)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
 {
     nc.navigationBarHidden = YES;
-    NSLog(@"show");
+
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
+
 }
 
 - (void)didReceiveMemoryWarning

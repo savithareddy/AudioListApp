@@ -1,5 +1,5 @@
 //
-//  ALAIpadViewController.h
+//  ALAPhoneListVC.h
 //  AudioList
 //
 //  Created by Savitha Reddy on 5/8/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ALAIpadViewController : UISplitViewController
-
-
+@interface ALAPhoneListVC : UITableViewController
 
 @end

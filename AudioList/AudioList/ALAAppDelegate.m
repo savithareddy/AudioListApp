@@ -8,12 +8,16 @@
 
 #import "ALAAppDelegate.h"
 #import "ALAIpadViewController.h"
+#import "ALAListVC.h"
+#import "ALASoundCloudRequest.h"
+
 
 @implementation ALAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     UINavigationController *nc = [[UINavigationController alloc] initWithNibName:nil bundle:nil];
 
     if([UIDevice currentDevice].userInterfaceIdiom  == UIUserInterfaceIdiomPad)
@@ -21,9 +25,10 @@
         ALAIpadViewController *splitVC = [[ALAIpadViewController alloc] initWithNibName:nil bundle:nil];
        self.window.rootViewController = splitVC;
         
+        [ALASoundCloudRequest getSongsWithCloudInfo:nil ];
     }else
     {
-        UITableViewController *tvc = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+        ALAListVC *tvc = [[ALAListVC alloc] initWithStyle:UITableViewStylePlain];
         [nc pushViewController:tvc animated:NO];
         self.window.rootViewController = nc;
     }

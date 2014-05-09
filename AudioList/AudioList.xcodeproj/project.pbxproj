@@ -20,6 +20,20 @@
 		91A0A37B191BB9220021DD38 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A379191BB9220021DD38 /* InfoPlist.strings */; };
 		91A0A37D191BB9220021DD38 /* AudioListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A0A37C191BB9220021DD38 /* AudioListTests.m */; };
 		91A0A388191BC51C0021DD38 /* ALAIpadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A0A387191BC51C0021DD38 /* ALAIpadViewController.m */; };
+		91A0A38E191BE4C90021DD38 /* ALAListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A0A38D191BE4C90021DD38 /* ALAListVC.m */; };
+		91A0A391191BE4EA0021DD38 /* ALAPhoneListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A0A390191BE4EA0021DD38 /* ALAPhoneListVC.m */; };
+		91A0A394191BE50F0021DD38 /* ALADetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A0A393191BE50F0021DD38 /* ALADetailVC.m */; };
+		91A0A397191BE8010021DD38 /* ALATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A0A396191BE8010021DD38 /* ALATableViewCell.m */; };
+		91A0A39A191BF1D40021DD38 /* ALASingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A0A399191BF1D40021DD38 /* ALASingleton.m */; };
+		91A0A39D191BF2270021DD38 /* ALAPhoneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A0A39C191BF2270021DD38 /* ALAPhoneTableViewCell.m */; };
+		91A0A3A3191C05F60021DD38 /* squares.png in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A3A2191C05F60021DD38 /* squares.png */; };
+		91A0A3A5191C06030021DD38 /* dice.png in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A3A4191C06030021DD38 /* dice.png */; };
+		91A0A3A7191C06210021DD38 /* bass_affirm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A3A6191C06210021DD38 /* bass_affirm.wav */; };
+		91A0A3A9191C06330021DD38 /* metallic_mouse_over.wav in Resources */ = {isa = PBXBuildFile; fileRef = 91A0A3A8191C06330021DD38 /* metallic_mouse_over.wav */; };
+		91A0A3AC191D14220021DD38 /* ALASong.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A0A3AB191D14220021DD38 /* ALASong.m */; };
+		91A0A3AF191D144F0021DD38 /* ALAArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A0A3AE191D144F0021DD38 /* ALAArtist.m */; };
+		91A0A3B2191D14610021DD38 /* ALAAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A0A3B1191D14610021DD38 /* ALAAlbum.m */; };
+		91A0A3B5191D1CFA0021DD38 /* ALASoundCloudRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A0A3B4191D1CFA0021DD38 /* ALASoundCloudRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +65,30 @@
 		91A0A37C191BB9220021DD38 /* AudioListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioListTests.m; sourceTree = "<group>"; };
 		91A0A386191BC51C0021DD38 /* ALAIpadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAIpadViewController.h; sourceTree = "<group>"; };
 		91A0A387191BC51C0021DD38 /* ALAIpadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAIpadViewController.m; sourceTree = "<group>"; };
+		91A0A38C191BE4C90021DD38 /* ALAListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALAListVC.h; path = AudioList/ALAListVC.h; sourceTree = "<group>"; };
+		91A0A38D191BE4C90021DD38 /* ALAListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALAListVC.m; path = AudioList/ALAListVC.m; sourceTree = "<group>"; };
+		91A0A38F191BE4EA0021DD38 /* ALAPhoneListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALAPhoneListVC.h; path = AudioList/ALAPhoneListVC.h; sourceTree = "<group>"; };
+		91A0A390191BE4EA0021DD38 /* ALAPhoneListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALAPhoneListVC.m; path = AudioList/ALAPhoneListVC.m; sourceTree = "<group>"; };
+		91A0A392191BE50F0021DD38 /* ALADetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALADetailVC.h; path = AudioList/ALADetailVC.h; sourceTree = "<group>"; };
+		91A0A393191BE50F0021DD38 /* ALADetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALADetailVC.m; path = AudioList/ALADetailVC.m; sourceTree = "<group>"; };
+		91A0A395191BE8010021DD38 /* ALATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALATableViewCell.h; path = AudioList/ALATableViewCell.h; sourceTree = "<group>"; };
+		91A0A396191BE8010021DD38 /* ALATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALATableViewCell.m; path = AudioList/ALATableViewCell.m; sourceTree = "<group>"; };
+		91A0A398191BF1D40021DD38 /* ALASingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALASingleton.h; sourceTree = "<group>"; };
+		91A0A399191BF1D40021DD38 /* ALASingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALASingleton.m; sourceTree = "<group>"; };
+		91A0A39B191BF2270021DD38 /* ALAPhoneTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ALAPhoneTableViewCell.h; path = AudioList/ALAPhoneTableViewCell.h; sourceTree = "<group>"; };
+		91A0A39C191BF2270021DD38 /* ALAPhoneTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ALAPhoneTableViewCell.m; path = AudioList/ALAPhoneTableViewCell.m; sourceTree = "<group>"; };
+		91A0A3A2191C05F60021DD38 /* squares.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squares.png; sourceTree = "<group>"; };
+		91A0A3A4191C06030021DD38 /* dice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dice.png; sourceTree = "<group>"; };
+		91A0A3A6191C06210021DD38 /* bass_affirm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bass_affirm.wav; sourceTree = "<group>"; };
+		91A0A3A8191C06330021DD38 /* metallic_mouse_over.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = metallic_mouse_over.wav; sourceTree = "<group>"; };
+		91A0A3AA191D14220021DD38 /* ALASong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALASong.h; sourceTree = "<group>"; };
+		91A0A3AB191D14220021DD38 /* ALASong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALASong.m; sourceTree = "<group>"; };
+		91A0A3AD191D144F0021DD38 /* ALAArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAArtist.h; sourceTree = "<group>"; };
+		91A0A3AE191D144F0021DD38 /* ALAArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAArtist.m; sourceTree = "<group>"; };
+		91A0A3B0191D14610021DD38 /* ALAAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAAlbum.h; sourceTree = "<group>"; };
+		91A0A3B1191D14610021DD38 /* ALAAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAAlbum.m; sourceTree = "<group>"; };
+		91A0A3B3191D1CFA0021DD38 /* ALASoundCloudRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALASoundCloudRequest.h; sourceTree = "<group>"; };
+		91A0A3B4191D1CFA0021DD38 /* ALASoundCloudRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALASoundCloudRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +118,18 @@
 		91A0A34B191BB9220021DD38 = {
 			isa = PBXGroup;
 			children = (
+				91A0A3B3191D1CFA0021DD38 /* ALASoundCloudRequest.h */,
+				91A0A3B4191D1CFA0021DD38 /* ALASoundCloudRequest.m */,
+				91A0A3AA191D14220021DD38 /* ALASong.h */,
+				91A0A3AB191D14220021DD38 /* ALASong.m */,
+				91A0A3AD191D144F0021DD38 /* ALAArtist.h */,
+				91A0A3AE191D144F0021DD38 /* ALAArtist.m */,
+				91A0A3B0191D14610021DD38 /* ALAAlbum.h */,
+				91A0A3B1191D14610021DD38 /* ALAAlbum.m */,
+				91A0A3A1191C05DE0021DD38 /* Audio */,
+				91A0A3A0191C05D80021DD38 /* Images */,
+				91A0A39F191BF2380021DD38 /* Iphone */,
+				91A0A39E191BF22E0021DD38 /* Ipad */,
 				91A0A35D191BB9220021DD38 /* AudioList */,
 				91A0A376191BB9220021DD38 /* AudioListTests */,
 				91A0A356191BB9220021DD38 /* Frameworks */,
@@ -110,10 +160,12 @@
 		91A0A35D191BB9220021DD38 /* AudioList */ = {
 			isa = PBXGroup;
 			children = (
-				91A0A366191BB9220021DD38 /* ALAAppDelegate.h */,
-				91A0A367191BB9220021DD38 /* ALAAppDelegate.m */,
 				91A0A386191BC51C0021DD38 /* ALAIpadViewController.h */,
 				91A0A387191BC51C0021DD38 /* ALAIpadViewController.m */,
+				91A0A366191BB9220021DD38 /* ALAAppDelegate.h */,
+				91A0A367191BB9220021DD38 /* ALAAppDelegate.m */,
+				91A0A398191BF1D40021DD38 /* ALASingleton.h */,
+				91A0A399191BF1D40021DD38 /* ALASingleton.m */,
 				91A0A369191BB9220021DD38 /* Images.xcassets */,
 				91A0A35E191BB9220021DD38 /* Supporting Files */,
 			);
@@ -147,6 +199,48 @@
 				91A0A379191BB9220021DD38 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		91A0A39E191BF22E0021DD38 /* Ipad */ = {
+			isa = PBXGroup;
+			children = (
+				91A0A392191BE50F0021DD38 /* ALADetailVC.h */,
+				91A0A393191BE50F0021DD38 /* ALADetailVC.m */,
+				91A0A38C191BE4C90021DD38 /* ALAListVC.h */,
+				91A0A38D191BE4C90021DD38 /* ALAListVC.m */,
+				91A0A395191BE8010021DD38 /* ALATableViewCell.h */,
+				91A0A396191BE8010021DD38 /* ALATableViewCell.m */,
+			);
+			name = Ipad;
+			sourceTree = "<group>";
+		};
+		91A0A39F191BF2380021DD38 /* Iphone */ = {
+			isa = PBXGroup;
+			children = (
+				91A0A38F191BE4EA0021DD38 /* ALAPhoneListVC.h */,
+				91A0A390191BE4EA0021DD38 /* ALAPhoneListVC.m */,
+				91A0A39B191BF2270021DD38 /* ALAPhoneTableViewCell.h */,
+				91A0A39C191BF2270021DD38 /* ALAPhoneTableViewCell.m */,
+			);
+			name = Iphone;
+			sourceTree = "<group>";
+		};
+		91A0A3A0191C05D80021DD38 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				91A0A3A2191C05F60021DD38 /* squares.png */,
+				91A0A3A4191C06030021DD38 /* dice.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		91A0A3A1191C05DE0021DD38 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				91A0A3A8191C06330021DD38 /* metallic_mouse_over.wav */,
+				91A0A3A6191C06210021DD38 /* bass_affirm.wav */,
+			);
+			name = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,8 +319,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91A0A3A7191C06210021DD38 /* bass_affirm.wav in Resources */,
+				91A0A3A5191C06030021DD38 /* dice.png in Resources */,
 				91A0A362191BB9220021DD38 /* InfoPlist.strings in Resources */,
+				91A0A3A9191C06330021DD38 /* metallic_mouse_over.wav in Resources */,
 				91A0A36A191BB9220021DD38 /* Images.xcassets in Resources */,
+				91A0A3A3191C05F60021DD38 /* squares.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,8 +344,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				91A0A364191BB9220021DD38 /* main.m in Sources */,
+				91A0A38E191BE4C90021DD38 /* ALAListVC.m in Sources */,
+				91A0A39A191BF1D40021DD38 /* ALASingleton.m in Sources */,
+				91A0A39D191BF2270021DD38 /* ALAPhoneTableViewCell.m in Sources */,
+				91A0A3B2191D14610021DD38 /* ALAAlbum.m in Sources */,
+				91A0A391191BE4EA0021DD38 /* ALAPhoneListVC.m in Sources */,
+				91A0A3AC191D14220021DD38 /* ALASong.m in Sources */,
 				91A0A368191BB9220021DD38 /* ALAAppDelegate.m in Sources */,
+				91A0A394191BE50F0021DD38 /* ALADetailVC.m in Sources */,
+				91A0A3AF191D144F0021DD38 /* ALAArtist.m in Sources */,
 				91A0A388191BC51C0021DD38 /* ALAIpadViewController.m in Sources */,
+				91A0A3B5191D1CFA0021DD38 /* ALASoundCloudRequest.m in Sources */,
+				91A0A397191BE8010021DD38 /* ALATableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +556,7 @@
 				91A0A382191BB9220021DD38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		91A0A383191BB9220021DD38 /* Build configuration list for PBXNativeTarget "AudioListTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +565,7 @@
 				91A0A385191BB9220021DD38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
