@@ -13,6 +13,7 @@
 
 #import "ALASoundCloudRequest.h"
 #import "ALAData.h"
+#import "ALADictionary.h"
 
 @implementation ALASoundCloudRequest
 
@@ -26,26 +27,45 @@
         
         NSArray *scInfo = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];// check this from the soundCloud for NSArray or dictionary etc..
         
-        for (NSDictionary *playlist in scInfo)
+        for (NSDictionary *playlistInfo in scInfo)
         {
+            ALAPlayList *playlist = [ALAPlayList newPlaylist];
+            playlist[@"title"] = playlistInfo[@"title"];
+            [[ALAData mainData] addNewPlaylists:playlist];
+            
             //create a new playlist and set things like playlist title
-            for (NSDictionary *trackInfo in playlist[@"tracks"])
+            for (NSDictionary *trackInfo in playlistInfo[@"tracks"])
             {
                 if (![trackInfo[@"streamable"] boolValue]) continue;
+                
                 ALATrack *track = [ALATrack newTrack];
+                 track.playlist = playlist;
                track[@"title"] = trackInfo[@"title"];
                 track[@"url"] = trackInfo[@"stream_url"];
+                [playlist.tracks addObject:track];
                 [[ALAData mainData ] addNewTrack:track];
+               
                 
+                ALAUser *user = [ALAUser newUser];
+                user[@"username"] = trackInfo[@"user"][@"username"];
+                track.user = user;
+                [[ALAData mainData] addNewUser: user];
+                
+            
             }
-        }
-        NSLog(@"%@",[[ALAData mainData] allTracks]);
+        
+        NSLog(@"playlists %@",[[ALAData mainData] allPlaylists]);
+            NSLog(@"tracks %@",[[ALAData mainData] allTracks]);
+            NSLog(@"users %@",[[ALAData mainData] allUsers]);
+            
+
     
             NSNotificationCenter *nCenter = [NSNotificationCenter defaultCenter]; //this line is requiredalways
             [nCenter postNotificationName:@"dataUpdated" object:nil]; // the name should match the same
-
+        }
         
            }];
+    
 }
 
 @end

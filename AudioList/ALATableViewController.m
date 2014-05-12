@@ -8,6 +8,7 @@
 
 #import "ALATableViewController.h"
 #import "ALAData.h"
+#import "ALADictionary.h"
 
 @interface ALATableViewController ()
 
@@ -65,6 +66,7 @@
 
     // Return the number of rows in the section.
     return [[[ALAData mainData] allTracks] count];
+    return [[[ALAData mainData] allUsers] count];
 }
 
 
@@ -76,8 +78,11 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    ALATrack *track = [[ALAData mainData] allTracks] [ indexPath.row]; // indexPath.row to get each cell // indexPath.section.row if u have sections also
+    ALATrack *track = [[ALAData mainData] allTracks] [ indexPath.row];// indexPath.row to get each cell // indexPath.section.row if u have sections also
+    
+    ALAUser *user = [[ALAData mainData] allUsers ][indexPath.row];
     cell.textLabel.text = track[@"title"];
+    cell.textLabel.text = user[@"username"];
     return cell;
 }
 

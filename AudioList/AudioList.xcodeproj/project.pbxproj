@@ -11,6 +11,9 @@
 		919BF1751921011D00FB3D60 /* ALATrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 919BF1741921011D00FB3D60 /* ALATrack.m */; };
 		919BF179192104E000FB3D60 /* ALASoundCloudRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 919BF178192104E000FB3D60 /* ALASoundCloudRequest.m */; };
 		919BF17C19211BB800FB3D60 /* ALATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 919BF17B19211BB800FB3D60 /* ALATableViewController.m */; };
+		919BF17F1921391600FB3D60 /* ALADictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 919BF17E1921391600FB3D60 /* ALADictionary.m */; };
+		919BF18219213A3200FB3D60 /* ALAUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 919BF18119213A3200FB3D60 /* ALAUser.m */; };
+		919BF18519213A6100FB3D60 /* ALAPlayList.m in Sources */ = {isa = PBXBuildFile; fileRef = 919BF18419213A6100FB3D60 /* ALAPlayList.m */; };
 		91A0A358191BB9220021DD38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A0A357191BB9220021DD38 /* Foundation.framework */; };
 		91A0A35A191BB9220021DD38 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A0A359191BB9220021DD38 /* CoreGraphics.framework */; };
 		91A0A35C191BB9220021DD38 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A0A35B191BB9220021DD38 /* UIKit.framework */; };
@@ -45,6 +48,12 @@
 		919BF178192104E000FB3D60 /* ALASoundCloudRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALASoundCloudRequest.m; sourceTree = "<group>"; };
 		919BF17A19211BB800FB3D60 /* ALATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALATableViewController.h; sourceTree = "<group>"; };
 		919BF17B19211BB800FB3D60 /* ALATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALATableViewController.m; sourceTree = "<group>"; };
+		919BF17D1921391600FB3D60 /* ALADictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALADictionary.h; sourceTree = "<group>"; };
+		919BF17E1921391600FB3D60 /* ALADictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALADictionary.m; sourceTree = "<group>"; };
+		919BF18019213A3200FB3D60 /* ALAUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAUser.h; sourceTree = "<group>"; };
+		919BF18119213A3200FB3D60 /* ALAUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAUser.m; sourceTree = "<group>"; };
+		919BF18319213A6100FB3D60 /* ALAPlayList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAPlayList.h; sourceTree = "<group>"; };
+		919BF18419213A6100FB3D60 /* ALAPlayList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAPlayList.m; sourceTree = "<group>"; };
 		91A0A354191BB9220021DD38 /* AudioList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A0A357191BB9220021DD38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		91A0A359191BB9220021DD38 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -101,8 +110,14 @@
 		919BF172192100B900FB3D60 /* Data Models */ = {
 			isa = PBXGroup;
 			children = (
+				919BF18319213A6100FB3D60 /* ALAPlayList.h */,
+				919BF18419213A6100FB3D60 /* ALAPlayList.m */,
+				919BF18019213A3200FB3D60 /* ALAUser.h */,
+				919BF18119213A3200FB3D60 /* ALAUser.m */,
 				919BF1731921011D00FB3D60 /* ALATrack.h */,
 				919BF1741921011D00FB3D60 /* ALATrack.m */,
+				919BF17D1921391600FB3D60 /* ALADictionary.h */,
+				919BF17E1921391600FB3D60 /* ALADictionary.m */,
 			);
 			name = "Data Models";
 			sourceTree = "<group>";
@@ -291,10 +306,13 @@
 			files = (
 				919BF1711921002700FB3D60 /* ALAData.m in Sources */,
 				91A0A364191BB9220021DD38 /* main.m in Sources */,
+				919BF18519213A6100FB3D60 /* ALAPlayList.m in Sources */,
 				91A0A368191BB9220021DD38 /* ALAAppDelegate.m in Sources */,
 				919BF17C19211BB800FB3D60 /* ALATableViewController.m in Sources */,
 				91A0A388191BC51C0021DD38 /* ALAIpadViewController.m in Sources */,
 				919BF179192104E000FB3D60 /* ALASoundCloudRequest.m in Sources */,
+				919BF17F1921391600FB3D60 /* ALADictionary.m in Sources */,
+				919BF18219213A3200FB3D60 /* ALAUser.m in Sources */,
 				919BF1751921011D00FB3D60 /* ALATrack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

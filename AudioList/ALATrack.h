@@ -8,9 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ALATrack : NSMutableDictionary //changed this from NSDictionary to NSObject again to NSDictionary
+#import "ALADictionary.h"
 
-+(id) newTrack; // class method for the track  // id is written instead of ALATrack cause easier to subclass any other time 
+@class ALAUser;
+@class ALAPlayList;
+
+@interface ALATrack : ALADictionary //changed this from NSDictionary to NSObject again to NSDictionary and then to ALADictionary along with import that file
+
+
++(id) newTrack; // class method for the track  // id is written instead of ALATrack cause easier to subclass any other time
+
+@property (nonatomic) ALAUser *user;
+@property (nonatomic) ALAPlayList *playlist;
 
 //-(id) objectForKey:(id) aKey;
 //-(void) setObject:(id) anObject forKey:(id<NSCopying>)aKey;
