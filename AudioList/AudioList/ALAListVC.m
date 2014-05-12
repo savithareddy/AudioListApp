@@ -70,8 +70,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@" Clicked %d", indexPath.row );
+    
     self.detailVC.index = indexPath.row;
-    NSLog(@" DEtail view %d" , self.detailVC.index);
+    
+//    NSLog(@" DEtail view %d" , self.detailVC.index);
 //    [self.detailVC];
 
 //    NSString *urlString = [[ALASingleton mainData] cellData][indexPath.row];

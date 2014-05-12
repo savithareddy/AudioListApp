@@ -7,10 +7,13 @@
 //
 
 #import "ALASingleton.h"
-
+#import "ALASoundCloudRequest.h"
 
 
 @implementation ALASingleton
+{
+    ALASoundCloudRequest *soundCR;
+}
 
 +(ALASingleton *) mainData
 {
@@ -35,7 +38,8 @@
 
 -(NSMutableArray *)cellData
 {
-    _cellData = [@
+    NSLog(@" Sound Cloud Request SAVITHA %@", [ALASoundCloudRequest getSongsWithCloudInfo]);
+   _cellData = [@
                      [@{@"image" : [UIImage imageNamed : @"squares"],@"name" : @"Melody"},
                       @{@"image" : [UIImage imageNamed : @"dice"],@"name" : @"Melody"}
                       ]mutableCopy];
@@ -47,5 +51,6 @@
     return [self.cellData copy];
 }
 
+//[soundCR soundCloudProfile]mutableCopy];
 
 @end

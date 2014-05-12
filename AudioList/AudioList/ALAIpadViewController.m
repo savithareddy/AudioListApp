@@ -9,7 +9,7 @@
 #import "ALAIpadViewController.h"
 #import "ALAListVC.h"
 #import "ALADetailVC.h" //import detailVC here after @class in .h
-#import "ALASoundCloudRequest.h"
+
 
 
 @interface ALAIpadViewController () <UISplitViewControllerDelegate>

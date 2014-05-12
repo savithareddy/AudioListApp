@@ -6,32 +6,60 @@
 //  Copyright (c) 2014 Savitha. All rights reserved.
 //
 
+#define CLIENT_ID @"a4ba461f5db7b5096c7aec0264e9ab96"
+
 #import "ALASoundCloudRequest.h"
+#import "ALASong.h"
+#import "ALAArtist.h"
+#import "ALAAlbum.h"
 
 @implementation ALASoundCloudRequest
 
-+ (NSDictionary *) getSongsWithCloudInfo: (NSString *)songInfo
++ (NSDictionary *) getSongsWithCloudInfo
 {
-//  NSMutableDictionary *albumInfo = [@{} mutableCopy];
-    NSString *soundCloud  = [NSString stringWithFormat:@"http://api.soundcloud.com/playlists/4252210.json?client_id=65db70dfcdaab4cf033f9a4003a341e1"];
+    NSString *soundCloud  = [NSString stringWithFormat:@"https://api.soundcloud.com/users/user622010178/playlists.json?client_id=%@", CLIENT_ID];
+    NSLog(@"Connecting to %@", soundCloud);
     NSURL * url = [NSURL URLWithString:soundCloud];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLResponse * response = nil;
     NSError * error = nil;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     NSError *jsonError = nil;
-    NSDictionary *soundCloudProfile = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&jsonError];
+    NSArray *soundCloudProfile = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:&jsonError];
     
-    NSLog(@" %@", soundCloudProfile);
     
-//    if (soundCloudProfile[@"name"] != nil ) [albumInfo setObject:soundCloudProfile[@"name"] forKey:@"name"];
-//    if (soundCloudProfile[@"avatar_url"] != nil ) [albumInfo setObject:soundCloudProfile[@"avatar_url"] forKey:@"image"];
-//    if (soundCloudProfile[@"html_url"] != nil ) [albumInfo setObject:soundCloudProfile[@"html_url"] forKey:@"github"];
-//    
-//    return albumInfo;
+    for (NSDictionary *albumInfo in soundCloudProfile)
+    {
+        
+        //artist instance
+        //album instance
+        
+        NSString* playlistName = albumInfo[@"title"];
+        //print
+        
+        NSDictionary *userInfo = albumInfo[@"user"];
+        NSString *username = userInfo[@"username"];
+        //print
+        
+        NSArray *trackInfo = albumInfo[@"tracks"];
+        for (NSDictionary *track  in trackInfo)
+        {
+            // track instance
+            
+            NSString *trackName=  track[@"title"];
+            //print
+        }
+    }
+    
     return soundCloudProfile;
-
+    
+// to update tableview NSNotification ...
+    
 }
+
+
+
+
 
 
 @end

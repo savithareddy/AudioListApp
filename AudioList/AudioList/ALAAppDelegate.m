@@ -9,7 +9,7 @@
 #import "ALAAppDelegate.h"
 #import "ALAIpadViewController.h"
 #import "ALAListVC.h"
-#import "ALASoundCloudRequest.h"
+//#import "ALASoundCloudRequest.h"
 
 
 @implementation ALAAppDelegate
@@ -25,7 +25,7 @@
         ALAIpadViewController *splitVC = [[ALAIpadViewController alloc] initWithNibName:nil bundle:nil];
        self.window.rootViewController = splitVC;
         
-        [ALASoundCloudRequest getSongsWithCloudInfo:nil ];
+//        [ALASoundCloudRequest getSongsWithCloudInfo];
     }else
     {
         ALAListVC *tvc = [[ALAListVC alloc] initWithStyle:UITableViewStylePlain];

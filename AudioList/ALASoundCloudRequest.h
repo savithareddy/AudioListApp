@@ -10,6 +10,6 @@
 
 @interface ALASoundCloudRequest : NSObject
 
-+ (NSDictionary *) getSongsWithCloudInfo: (NSString *)songInfo;
++ (NSDictionary *) getSongsWithCloudInfo;
 
 @end
