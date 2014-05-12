@@ -7,6 +7,8 @@
 //
 
 #import "ALAIpadViewController.h"
+#import "ALATableViewController.h"
+#import "ALASoundCloudRequest.h"
 
 @interface ALAIpadViewController () <UISplitViewControllerDelegate>
 
@@ -14,7 +16,7 @@
 
 @implementation ALAIpadViewController
 {
-    UITableViewController *listVC;
+    ALATableViewController *listVC;
     UIViewController *detailVC;
     UINavigationController *nc;
 }
@@ -25,10 +27,11 @@
     if (self) {
         detailVC = [[UIViewController alloc] initWithNibName:nil bundle:nil];
         nc = [[UINavigationController alloc] initWithRootViewController:detailVC];
-        listVC = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+        listVC = [[ALATableViewController alloc] initWithStyle:UITableViewStylePlain];
         self.viewControllers = @[listVC,nc];
         self.presentsWithGesture = YES; //default value is YES so popover still works if this is commented
         self.delegate = self;
+        [ALASoundCloudRequest updateData]; // added this
     }
     return self;
 }

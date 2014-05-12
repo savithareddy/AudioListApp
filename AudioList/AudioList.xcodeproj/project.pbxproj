@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		919BF1711921002700FB3D60 /* ALAData.m in Sources */ = {isa = PBXBuildFile; fileRef = 919BF1701921002700FB3D60 /* ALAData.m */; };
+		919BF1751921011D00FB3D60 /* ALATrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 919BF1741921011D00FB3D60 /* ALATrack.m */; };
+		919BF179192104E000FB3D60 /* ALASoundCloudRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 919BF178192104E000FB3D60 /* ALASoundCloudRequest.m */; };
+		919BF17C19211BB800FB3D60 /* ALATableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 919BF17B19211BB800FB3D60 /* ALATableViewController.m */; };
 		91A0A358191BB9220021DD38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A0A357191BB9220021DD38 /* Foundation.framework */; };
 		91A0A35A191BB9220021DD38 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A0A359191BB9220021DD38 /* CoreGraphics.framework */; };
 		91A0A35C191BB9220021DD38 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A0A35B191BB9220021DD38 /* UIKit.framework */; };
@@ -33,6 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		919BF16F1921002700FB3D60 /* ALAData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAData.h; sourceTree = "<group>"; };
+		919BF1701921002700FB3D60 /* ALAData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAData.m; sourceTree = "<group>"; };
+		919BF1731921011D00FB3D60 /* ALATrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALATrack.h; sourceTree = "<group>"; };
+		919BF1741921011D00FB3D60 /* ALATrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALATrack.m; sourceTree = "<group>"; };
+		919BF177192104E000FB3D60 /* ALASoundCloudRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALASoundCloudRequest.h; sourceTree = "<group>"; };
+		919BF178192104E000FB3D60 /* ALASoundCloudRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALASoundCloudRequest.m; sourceTree = "<group>"; };
+		919BF17A19211BB800FB3D60 /* ALATableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALATableViewController.h; sourceTree = "<group>"; };
+		919BF17B19211BB800FB3D60 /* ALATableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALATableViewController.m; sourceTree = "<group>"; };
 		91A0A354191BB9220021DD38 /* AudioList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A0A357191BB9220021DD38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		91A0A359191BB9220021DD38 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -77,9 +89,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		919BF16E1920FFFF00FB3D60 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				919BF16F1921002700FB3D60 /* ALAData.h */,
+				919BF1701921002700FB3D60 /* ALAData.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		919BF172192100B900FB3D60 /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				919BF1731921011D00FB3D60 /* ALATrack.h */,
+				919BF1741921011D00FB3D60 /* ALATrack.m */,
+			);
+			name = "Data Models";
+			sourceTree = "<group>";
+		};
+		919BF176192104AF00FB3D60 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				919BF177192104E000FB3D60 /* ALASoundCloudRequest.h */,
+				919BF178192104E000FB3D60 /* ALASoundCloudRequest.m */,
+				919BF17A19211BB800FB3D60 /* ALATableViewController.h */,
+				919BF17B19211BB800FB3D60 /* ALATableViewController.m */,
+			);
+			name = Requests;
+			sourceTree = "<group>";
+		};
 		91A0A34B191BB9220021DD38 = {
 			isa = PBXGroup;
 			children = (
+				919BF176192104AF00FB3D60 /* Requests */,
+				919BF172192100B900FB3D60 /* Data Models */,
+				919BF16E1920FFFF00FB3D60 /* Models */,
 				91A0A35D191BB9220021DD38 /* AudioList */,
 				91A0A376191BB9220021DD38 /* AudioListTests */,
 				91A0A356191BB9220021DD38 /* Frameworks */,
@@ -245,9 +289,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				919BF1711921002700FB3D60 /* ALAData.m in Sources */,
 				91A0A364191BB9220021DD38 /* main.m in Sources */,
 				91A0A368191BB9220021DD38 /* ALAAppDelegate.m in Sources */,
+				919BF17C19211BB800FB3D60 /* ALATableViewController.m in Sources */,
 				91A0A388191BC51C0021DD38 /* ALAIpadViewController.m in Sources */,
+				919BF179192104E000FB3D60 /* ALASoundCloudRequest.m in Sources */,
+				919BF1751921011D00FB3D60 /* ALATrack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +496,7 @@
 				91A0A382191BB9220021DD38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		91A0A383191BB9220021DD38 /* Build configuration list for PBXNativeTarget "AudioListTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +505,7 @@
 				91A0A385191BB9220021DD38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
