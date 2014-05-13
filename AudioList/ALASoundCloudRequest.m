@@ -32,6 +32,7 @@
             ALAPlayList *playlist = [ALAPlayList newPlaylist];
             playlist[@"title"] = playlistInfo[@"title"];
             [[ALAData mainData] addNewPlaylists:playlist];
+            NSLog(@"track is  %@", playlist[@"title"]);
             
             //create a new playlist and set things like playlist title
             for (NSDictionary *trackInfo in playlistInfo[@"tracks"])
@@ -40,23 +41,26 @@
                 
                 ALATrack *track = [ALATrack newTrack];
                  track.playlist = playlist;
+                
                track[@"title"] = trackInfo[@"title"];
                 track[@"url"] = trackInfo[@"stream_url"];
-                [playlist.tracks addObject:track];
+             [playlist.tracks addObject:track];
                 [[ALAData mainData ] addNewTrack:track];
+                
                
                 
                 ALAUser *user = [ALAUser newUser];
                 user[@"username"] = trackInfo[@"user"][@"username"];
+               
                 track.user = user;
                 [[ALAData mainData] addNewUser: user];
                 
             
             }
         
-        NSLog(@"playlists %@",[[ALAData mainData] allPlaylists]);
-            NSLog(@"tracks %@",[[ALAData mainData] allTracks]);
-            NSLog(@"users %@",[[ALAData mainData] allUsers]);
+//        NSLog(@"playlists %@",[[ALAData mainData] allPlaylists]);
+//           NSLog(@"tracks %@",[[ALAData mainData] allTracks]);
+//           NSLog(@"users %@",[[ALAData mainData] allUsers]);
             
 
     

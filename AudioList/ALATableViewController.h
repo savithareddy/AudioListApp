@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class ALADetailViewController;
+
 @interface ALATableViewController : UITableViewController
+
+@property (nonatomic) ALADetailViewController *detailVC;
 
 @end

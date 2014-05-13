@@ -70,7 +70,7 @@
     
 }
 
--(NSArray *)allPlaylists
+-(NSMutableArray *)allPlaylists
 {
     return  [playlists copy]; // copy to play with the copy and keep original as is
 }

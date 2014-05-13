@@ -14,6 +14,11 @@
 		919BF17F1921391600FB3D60 /* ALADictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 919BF17E1921391600FB3D60 /* ALADictionary.m */; };
 		919BF18219213A3200FB3D60 /* ALAUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 919BF18119213A3200FB3D60 /* ALAUser.m */; };
 		919BF18519213A6100FB3D60 /* ALAPlayList.m in Sources */ = {isa = PBXBuildFile; fileRef = 919BF18419213A6100FB3D60 /* ALAPlayList.m */; };
+		919BF1881921B75100FB3D60 /* ALASounds.m in Sources */ = {isa = PBXBuildFile; fileRef = 919BF1871921B75100FB3D60 /* ALASounds.m */; };
+		919BF18B1921BCFF00FB3D60 /* ALADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 919BF18A1921BCFF00FB3D60 /* ALADetailViewController.m */; };
+		919BF18E1921BDD200FB3D60 /* ALATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 919BF18D1921BDD200FB3D60 /* ALATableViewCell.m */; };
+		919BF1911921C47200FB3D60 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 919BF1901921C47200FB3D60 /* play.png */; };
+		919BF1931921C47900FB3D60 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 919BF1921921C47900FB3D60 /* stop.png */; };
 		91A0A358191BB9220021DD38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A0A357191BB9220021DD38 /* Foundation.framework */; };
 		91A0A35A191BB9220021DD38 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A0A359191BB9220021DD38 /* CoreGraphics.framework */; };
 		91A0A35C191BB9220021DD38 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A0A35B191BB9220021DD38 /* UIKit.framework */; };
@@ -54,6 +59,14 @@
 		919BF18119213A3200FB3D60 /* ALAUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAUser.m; sourceTree = "<group>"; };
 		919BF18319213A6100FB3D60 /* ALAPlayList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALAPlayList.h; sourceTree = "<group>"; };
 		919BF18419213A6100FB3D60 /* ALAPlayList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALAPlayList.m; sourceTree = "<group>"; };
+		919BF1861921B75100FB3D60 /* ALASounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALASounds.h; sourceTree = "<group>"; };
+		919BF1871921B75100FB3D60 /* ALASounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALASounds.m; sourceTree = "<group>"; };
+		919BF1891921BCFF00FB3D60 /* ALADetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALADetailViewController.h; sourceTree = "<group>"; };
+		919BF18A1921BCFF00FB3D60 /* ALADetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALADetailViewController.m; sourceTree = "<group>"; };
+		919BF18C1921BDD200FB3D60 /* ALATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALATableViewCell.h; sourceTree = "<group>"; };
+		919BF18D1921BDD200FB3D60 /* ALATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALATableViewCell.m; sourceTree = "<group>"; };
+		919BF1901921C47200FB3D60 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		919BF1921921C47900FB3D60 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 		91A0A354191BB9220021DD38 /* AudioList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A0A357191BB9220021DD38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		91A0A359191BB9220021DD38 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -129,13 +142,29 @@
 				919BF178192104E000FB3D60 /* ALASoundCloudRequest.m */,
 				919BF17A19211BB800FB3D60 /* ALATableViewController.h */,
 				919BF17B19211BB800FB3D60 /* ALATableViewController.m */,
+				919BF1891921BCFF00FB3D60 /* ALADetailViewController.h */,
+				919BF18A1921BCFF00FB3D60 /* ALADetailViewController.m */,
+				919BF18C1921BDD200FB3D60 /* ALATableViewCell.h */,
+				919BF18D1921BDD200FB3D60 /* ALATableViewCell.m */,
 			);
 			name = Requests;
+			sourceTree = "<group>";
+		};
+		919BF18F1921C46600FB3D60 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				919BF1921921C47900FB3D60 /* stop.png */,
+				919BF1901921C47200FB3D60 /* play.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		91A0A34B191BB9220021DD38 = {
 			isa = PBXGroup;
 			children = (
+				919BF18F1921C46600FB3D60 /* Images */,
+				919BF1861921B75100FB3D60 /* ALASounds.h */,
+				919BF1871921B75100FB3D60 /* ALASounds.m */,
 				919BF176192104AF00FB3D60 /* Requests */,
 				919BF172192100B900FB3D60 /* Data Models */,
 				919BF16E1920FFFF00FB3D60 /* Models */,
@@ -285,7 +314,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				91A0A362191BB9220021DD38 /* InfoPlist.strings in Resources */,
+				919BF1931921C47900FB3D60 /* stop.png in Resources */,
 				91A0A36A191BB9220021DD38 /* Images.xcassets in Resources */,
+				919BF1911921C47200FB3D60 /* play.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +341,10 @@
 				91A0A368191BB9220021DD38 /* ALAAppDelegate.m in Sources */,
 				919BF17C19211BB800FB3D60 /* ALATableViewController.m in Sources */,
 				91A0A388191BC51C0021DD38 /* ALAIpadViewController.m in Sources */,
+				919BF18E1921BDD200FB3D60 /* ALATableViewCell.m in Sources */,
+				919BF1881921B75100FB3D60 /* ALASounds.m in Sources */,
 				919BF179192104E000FB3D60 /* ALASoundCloudRequest.m in Sources */,
+				919BF18B1921BCFF00FB3D60 /* ALADetailViewController.m in Sources */,
 				919BF17F1921391600FB3D60 /* ALADictionary.m in Sources */,
 				919BF18219213A3200FB3D60 /* ALAUser.m in Sources */,
 				919BF1751921011D00FB3D60 /* ALATrack.m in Sources */,

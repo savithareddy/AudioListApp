@@ -19,6 +19,8 @@
     ALATableViewController *listVC;
     UIViewController *detailVC;
     UINavigationController *nc;
+    UITableViewController *blankVC;
+   
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -28,11 +30,23 @@
         detailVC = [[UIViewController alloc] initWithNibName:nil bundle:nil];
         nc = [[UINavigationController alloc] initWithRootViewController:detailVC];
         listVC = [[ALATableViewController alloc] initWithStyle:UITableViewStylePlain];
-        self.viewControllers = @[listVC,nc];
+        blankVC = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+        
+        UITabBarController *tabBarController = [[UITabBarController alloc] init];
+        listVC.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemDownloads tag:1];
+       blankVC.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFeatured tag:2];
+        
+        [tabBarController setViewControllers:@[listVC,blankVC]];
+
+        self.viewControllers = @[tabBarController,nc];
+        tabBarController.title = @"Playlists";
+        
         self.presentsWithGesture = YES; //default value is YES so popover still works if this is commented
         self.delegate = self;
         [ALASoundCloudRequest updateData]; // added this
-    }
+        
+      
+       }
     return self;
 }
 

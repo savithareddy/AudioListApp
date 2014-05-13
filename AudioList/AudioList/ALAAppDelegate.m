@@ -8,6 +8,7 @@
 
 #import "ALAAppDelegate.h"
 #import "ALAIpadViewController.h"
+#import "ALATableViewController.h"
 
 @implementation ALAAppDelegate
 
@@ -19,7 +20,7 @@
     if([UIDevice currentDevice].userInterfaceIdiom  == UIUserInterfaceIdiomPad)
     {
         ALAIpadViewController *splitVC = [[ALAIpadViewController alloc] initWithNibName:nil bundle:nil];
-       self.window.rootViewController = splitVC;
+        self.window.rootViewController = splitVC;
         
     }else
     {

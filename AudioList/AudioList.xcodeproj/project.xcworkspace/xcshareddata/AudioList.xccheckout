@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>B99FEE2D-F1E4-4D57-83C1-4A55503FFFDF</string>
+	<string>CAD38A06-1837-4568-BD6F-E92D37109337</string>
 	<key>IDESourceControlProjectName</key>
 	<string>AudioList</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>54744F25-8935-4278-B566-60F767D3AAAE</key>
-		<string>https://github.com/savithareddy/The-Iron-Yard.git</string>
+		<key>C69E59EC-7DC6-45FF-9404-72F2DA638C6C</key>
+		<string>https://github.com/savithareddy/AudioListApp.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>AudioList/AudioList.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>54744F25-8935-4278-B566-60F767D3AAAE</key>
+		<key>C69E59EC-7DC6-45FF-9404-72F2DA638C6C</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/savithareddy/The-Iron-Yard.git</string>
+	<string>https://github.com/savithareddy/AudioListApp.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>54744F25-8935-4278-B566-60F767D3AAAE</string>
+	<string>C69E59EC-7DC6-45FF-9404-72F2DA638C6C</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>54744F25-8935-4278-B566-60F767D3AAAE</string>
+			<string>C69E59EC-7DC6-45FF-9404-72F2DA638C6C</string>
 			<key>IDESourceControlWCCName</key>
-			<string>The-Iron-Yard</string>
+			<string>AudioListApp</string>
 		</dict>
 	</array>
 </dict>

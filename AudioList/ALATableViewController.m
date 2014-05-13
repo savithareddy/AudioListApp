@@ -7,7 +7,10 @@
 //
 
 #import "ALATableViewController.h"
+#import "ALADetailViewController.h"
+#import "ALAIpadViewController.h"
 #import "ALAData.h"
+//#import "ALAPlayList.h"
 #import "ALADictionary.h"
 
 @interface ALATableViewController ()
@@ -15,21 +18,26 @@
 @end
 
 @implementation ALATableViewController
+{
+    ALAIpadViewController *ipadVC;
+
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
+        
         // Custom initialization
         
-                       NSNotificationCenter *nCenter = [NSNotificationCenter defaultCenter]; //singleton for notification
-//                       NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-                       [ nCenter addObserverForName:@"dataUpdated" object:nil queue:nil usingBlock:^(NSNotification *note) {
-                           NSLog(@" Reload TableView");
-                            dispatch_async(dispatch_get_main_queue(), ^{
-                           [self.tableView reloadData]; 
-                       });
-
+        NSNotificationCenter *nCenter = [NSNotificationCenter defaultCenter]; //singleton for notification
+        //                       NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+        [ nCenter addObserverForName:@"dataUpdated" object:nil queue:nil usingBlock:^(NSNotification *note) {
+            NSLog(@" Reload TableView");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
+            
         }];
     }
     return self;
@@ -39,11 +47,8 @@
 {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,12 +68,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
-    // Return the number of rows in the section.
-    return [[[ALAData mainData] allTracks] count];
-    return [[[ALAData mainData] allUsers] count];
+    NSLog(@"numberOfRowsInSection() %d", ipadVC.tabBarItem.tag);
+    if (ipadVC.tabBarItem.tag ==1 )
+    {
+        return [[[ALAData mainData] allPlaylists] count];
+    }else  if (ipadVC.tabBarItem.tag == 2){
+        return [[[ALAData mainData] allTracks] count];
+    }
+    return 0;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -78,62 +86,74 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    ALATrack *track = [[ALAData mainData] allTracks] [ indexPath.row];// indexPath.row to get each cell // indexPath.section.row if u have sections also
+    // indexPath.row to get each cell // indexPath.section.row if u have sections also
+    NSLog(@" %d", ipadVC.tabBarItem.tag);
+    if (ipadVC.tabBarItem.tag ==1 ) {
+        ALAPlayList *playlist = [[ALAData mainData] allPlaylists] [indexPath .row];
+        cell.textLabel.text = playlist[@"title"];
+    }else if (ipadVC.tabBarItem.tag == 2){
+        ALATrack *track = [[ALAData mainData] allTracks] [indexPath .row];
+        cell.textLabel.text = track[@"title"];
+    }
     
-    ALAUser *user = [[ALAData mainData] allUsers ][indexPath.row];
-    cell.textLabel.text = track[@"title"];
-    cell.textLabel.text = user[@"username"];
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    self.detailVC.index = indexPath.row;
+    
+}
+
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
