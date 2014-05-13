@@ -69,7 +69,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@" Clicked %d", indexPath.row );
+//    NSLog(@" Clicked %d", indexPath.row );
     
     self.detailVC.index = indexPath.row;
     

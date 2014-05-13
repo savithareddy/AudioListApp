@@ -38,7 +38,7 @@
 
 -(NSMutableArray *)cellData
 {
-    NSLog(@" Sound Cloud Request SAVITHA %@", [ALASoundCloudRequest getSongsWithCloudInfo]);
+//    NSLog(@" Sound Cloud Request SAVITHA %@", [ALASoundCloudRequest getSongsWithCloudInfo]);
    _cellData = [@
                      [@{@"image" : [UIImage imageNamed : @"squares"],@"name" : @"Melody"},
                       @{@"image" : [UIImage imageNamed : @"dice"],@"name" : @"Melody"}
@@ -48,9 +48,10 @@
 
 -(NSMutableArray *)allCellData
 {
+    
     return [self.cellData copy];
 }
 
-//[soundCR soundCloudProfile]mutableCopy];
+
 
 @end

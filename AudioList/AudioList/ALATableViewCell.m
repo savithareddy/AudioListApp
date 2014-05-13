@@ -56,7 +56,7 @@
 {
     _index = index;
   NSDictionary *cellInfo = [[ALASingleton mainData] cellData] [index];
-   NSLog(@" cell Info is %@",cellInfo);
+//   NSLog(@" cell Info is %@",cellInfo);
     audioImage.image = cellInfo[@"image"];
    audioName.text = cellInfo[@"name"];
   

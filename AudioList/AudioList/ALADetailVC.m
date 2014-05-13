@@ -46,7 +46,7 @@
 
 -(void)setIndex:(NSInteger)index
 {
-    NSLog(@"calling Set Detail");
+//    NSLog(@"calling Set Detail");
     _index = index;
     NSDictionary *detailInfo = [[ALASingleton mainData] allCellData] [index];
     NSLog(@" cell Info is %@",detailInfo);
